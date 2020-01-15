@@ -16,7 +16,7 @@ python3 generate_keys.py
 
 __About:__
 
-This project is a proof of concept for working with Apple's chunklist files. The verification tool 'verify.py' can be used in conjunction with the efi keys to verify official chunklist files. The creation tool 'create.py' is purely a proof of concept to show the creation process for the chunklist files. Although the creation tool has the ability to produce chunklist files, it utilizes the custom private key created with the key generation tool 'generate_keys.py'.
+This project is a proof of concept for working with Apple's chunklist files. The verification tool 'verify.py' can be used in conjunction with the efi keys to verify official chunklist files. It can also be used with the custom pubkey.bin file created with 'generate_keys.py' to verify custom chunklist files. The creation tool 'create.py' is purely a proof of concept to show the creation process for the chunklist files. Although the creation tool has the ability to produce chunklist files, it utilizes the custom private key created with the key generation tool 'generate_keys.py'.
 
 When verifying chunklists, 'verify.py' utilizes Apples raw RSA 2048 key format, which is produced by 'generate_keys.py' as 'pubkey.bin'.
 
