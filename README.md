@@ -22,4 +22,4 @@ When verifying chunklists, 'verify.py' utilizes Apples raw RSA 2048 key format, 
 
 __EFI Keys:__
 
-The 5 EFI keys in the 'efi_keys' folder have been extracted from an Apple EFI rom. These keys were discussed by both <a href = "https://trmm.net/Thunderstrike_31c3">Trammell Hudson</a> and <a href = "https://reverse.put.as/2016/06/25/apple-efi-firmware-passwords-and-the-scbo-myth/"> reverser a@t put.as </a>. So far, only the first key seems to be utilized durink chunklist verification. This means, that the public keys are hard coded into Apple EFI rom chips.
+The 5 EFI keys in the 'efi_keys' folder have been extracted from an Apple EFI rom. These keys were discussed by both <a href = "https://trmm.net/Thunderstrike_31c3">Trammell Hudson</a> and <a href = "https://reverse.put.as/2016/06/25/apple-efi-firmware-passwords-and-the-scbo-myth/"> reverser a@t put.as </a>. So far, only the first key seems to be utilized during chunklist verification. This means, that the public keys are hard coded into Apple EFI rom chips.
