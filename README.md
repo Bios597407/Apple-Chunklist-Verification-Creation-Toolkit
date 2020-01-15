@@ -1,5 +1,5 @@
 # Apple-Chunklist-Verification-Creation-Tool
-Python 3 Tool for Verifying Apple Chunklists and Creating Custom Chunklist Files.
+Python 3 Tool for Verifying and Creating Apple Chunklist Files.
 
 __Required Modules:__
 ```
