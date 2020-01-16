@@ -27,4 +27,4 @@ The 5 EFI keys in the 'efi_keys' folder have been extracted from an Apple EFI ro
 
 __Replace Original Public Key with Custom Public Key:__
 
-In order to install utilize custom chunklist files, the EFI rom will need to be patched with a custom public key. This can be done with 'replace.py'. Just choose one of the 5 public keys and replace it with a custom public key. Note that since the first key is utilized, patching it will likely result in an inability to verify any future official software verifications.
+In order to utilize custom chunklist files, the EFI rom will need to be patched with a custom public key. This can be done with 'replace.py'. Just choose one of the 5 public keys and replace it with a custom public key. Note that since the first key is utilized, patching it will likely result in an inability to verify any future official software verifications.
