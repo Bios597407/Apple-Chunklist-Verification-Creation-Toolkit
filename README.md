@@ -12,6 +12,7 @@ __Usage:__
 python3 verify.py <chunklist file> <public key in efi format>
 python3 create.py <dmg file> <output file> <private key in PEM format>
 python3 generate_keys.py
+python3 replace.py <efi rom file> <output file> <original efi public key file> <custom public key file>
 ```
 
 __About:__
@@ -22,4 +23,8 @@ When verifying chunklists, 'verify.py' utilizes Apples raw RSA 2048 key format. 
 
 __EFI Keys:__
 
-The 5 EFI keys in the 'efi_keys' folder have been extracted from an Apple EFI rom. These keys were discussed by both <a href = "https://trmm.net/Thunderstrike_31c3">Trammell Hudson</a> and <a href = "https://reverse.put.as/2016/06/25/apple-efi-firmware-passwords-and-the-scbo-myth/"> reverser a@t put.as </a>. So far, only the first key seems to be utilized during chunklist verification. This also means that the public keys are hard coded into Apple EFI rom chips. The only way to allow for the verification of custom chunklists would be to replace one of the EFI keys with a custom key.
+The 5 EFI keys in the 'efi_keys' folder have been extracted from an Apple EFI rom. These keys were discussed by both <a href = "https://trmm.net/Thunderstrike_31c3">Trammell Hudson</a> and <a href = "https://reverse.put.as/2016/06/25/apple-efi-firmware-passwords-and-the-scbo-myth/"> reverser a@t put.as </a>. So far, only the first key seems to be utilized during chunklist verification. This also means that the public keys are hard coded into Apple EFI rom chips. The only way to allow for the verification of custom chunklists is to patch your EFI rom with one of the custom EFI public keys generated with 'generate_keys.py'.
+
+__Replace Original Public Key with Custom Public Key:__
+
+In order to install utilize custom chunklist files, the EFI rom will need to be patched with a custom public key. This can be done with 'replace.py'. Just choose one of the 5 public keys and replace it with a custom public key. Note that since the first key is utilized, patching it will likely result in an inability to verify any future official software verifications.
