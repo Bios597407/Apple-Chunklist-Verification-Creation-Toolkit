@@ -31,4 +31,4 @@ In order to utilize custom chunklist files, the EFI rom will need to be patched 
 
 __Context:__
 
-This tools were developed with 2013 and newer systems in mind. The public key formats for older systems may differ.
+These tools were developed with 2013 and newer systems in mind. The public key formats for older systems may differ.
