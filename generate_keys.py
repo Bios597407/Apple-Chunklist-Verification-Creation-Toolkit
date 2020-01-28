@@ -1,6 +1,5 @@
 from Crypto.PublicKey import RSA
 import numpy as np
-import os
 
 # Generate Keys
 key = RSA.generate(2048)
@@ -23,12 +22,8 @@ with open('custom_keys/public_key.pem', 'wb+') as out_file:
 	out_file.write(public_key)
 	out_file.close()
 
-# Remove pubkey.bin file if exists from previous attempt (becuase using append write option to build 'ab+')
-if os.path.exists('custom_keys/pubkey.bin'):
-	os.remove('custom_keys/pubkey.bin')
-
-# write reversed public key in raw RSA format like the keys stored in EFI
-with open('custom_keys/pubkey.bin', 'ab+') as out_file:
+# write reversed public key in raw RSA format like the keys stored in EFI Keys folder
+with open('custom_keys/pubkey.bin', 'wb+') as out_file:
 	out_file.write(reversed_pubkey)
 	out_file.close()
 
