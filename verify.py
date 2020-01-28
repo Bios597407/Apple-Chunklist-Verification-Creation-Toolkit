@@ -7,7 +7,7 @@ import sys
 def main(chunklist, public_key_loc):
 
 	with open(public_key_loc,"rb") as key:
-		key.seek(24) #Seek past header
+		key.seek(0)
 		pubkey = key.read(256)
 		reversed_key = int.from_bytes(pubkey, 'little') #Little endian encoding (so bytes get reversed)
 		key.close()
