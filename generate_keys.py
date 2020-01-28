@@ -28,9 +28,7 @@ if os.path.exists('custom_keys/pubkey.bin'):
 	os.remove('custom_keys/pubkey.bin')
 
 # write reversed public key in raw RSA format like the keys stored in EFI
-header = b'\x18\x01\x00\x19\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xFF\xFF\xFF\xFF\x00\x01\x00\x00'
 with open('custom_keys/pubkey.bin', 'ab+') as out_file:
-	out_file.write(header)
 	out_file.write(reversed_pubkey)
 	out_file.close()
 
